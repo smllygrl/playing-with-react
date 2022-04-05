@@ -1,17 +1,23 @@
-import { useState } from "react";
-// import { lightTheme, darkTheme } from "./themes";
+import { useTheme, useThemeUpdate } from "../../ThemeContext";
+// import { themeStyles } from "./themes";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    console.log("Theme button pressed");
-    setTheme(theme === "light" ? setTheme("dark") : setTheme("light"));
+  const darkTheme = useTheme();
+  const toggleTheme = useThemeUpdate();
+  const themeStyles = {
+    backgroundColor: darkTheme ? "#333" : "#CCC",
+    colour: darkTheme ? "#CCC" : "#333",
+    padding: "2rem",
+    margin: "2rem",
   };
 
-  // if theme is light then set theme dark else set theme light
-
-  return <button onClick={toggleTheme}>🌞/🌙</button>;
+  return (
+    <div>
+      <button style={themeStyles} onClick={toggleTheme}>
+        🌞/🌙
+      </button>
+    </div>
+  );
 };
 
 export default ThemeToggle;
