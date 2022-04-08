@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { SearchContext } from "../../context";
+import { SearchContext } from "../../context/SearchContext";
 
 const SearchBar = () => {
   const [currentInput, setCurrentInput] = useState("");
@@ -16,7 +16,7 @@ const SearchBar = () => {
 
   return (
     <div>
-      <input value={currentInput} onChange={handleChange} />
+      <input value={currentInput} onChange={handleChange} type="text" />
       <button onClick={handleClick}>Search</button>
     </div>
   );
