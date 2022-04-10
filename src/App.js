@@ -12,6 +12,7 @@ import SearchProvider from "./context/SearchContext";
 
 function App() {
   return (
+    // Everything wrapped in the search provider has access to search and setSearch
     <SearchProvider>
       <SearchBar />
       <Products />
