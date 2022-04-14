@@ -1,0 +1,26 @@
+.searchBar {
+  border: 1px solid red;
+  height: 50px;
+  width: 275px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__input {
+    display: flex;
+    margin: 10px;
+    background: none;
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    border-left: none;
+    border-right: none;
+    padding: 6px;
+  }
+  &__button {
+    background: none;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 6px;
+    margin: 5px;
+    cursor: pointer;
+  }
+}

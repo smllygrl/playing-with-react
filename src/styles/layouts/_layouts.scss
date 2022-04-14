@@ -1,0 +1,12 @@
+@mixin container($cont-bckgrnd, $cont-txt) {
+  display: flex;
+  flex-direction: column;
+  border: black 1px solid;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  background: $cont-bckgrnd;
+  color: $cont-txt;
+  margin: 20px;
+}

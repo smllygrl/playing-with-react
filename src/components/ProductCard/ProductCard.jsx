@@ -1,8 +1,10 @@
+import "./ProductCard.scss";
+
 const ProductCard = ({ product }) => {
   return (
-    <div>
-      <h2>{product.name}</h2>
-      <p>{product.description}</p>
+    <div className="productCard">
+      <p className="productCard__title">{product.name}</p>
+      <p className="productCard__description">{product.description}</p>
     </div>
   );
 };

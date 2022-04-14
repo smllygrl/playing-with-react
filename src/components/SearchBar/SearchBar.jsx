@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
-import { SearchContext } from "../../context/SearchContext";
+import { SearchContext } from "../../context/SearchContext/SearchContext";
+import "./SearchBar.scss";
 
 const SearchBar = () => {
   const [currentInput, setCurrentInput] = useState("");
@@ -22,9 +23,16 @@ const SearchBar = () => {
   // Go to ProductList to follow the breadcrumbs
 
   return (
-    <div>
-      <input value={currentInput} onChange={handleChange} type="text" />
-      <button onClick={handleClick}>Search</button>
+    <div className="searchBar">
+      <input
+        className="searchBar__input"
+        value={currentInput}
+        onChange={handleChange}
+        type="text"
+      />
+      <button className="searchBar__button" onClick={handleClick}>
+        SEARCH
+      </button>
     </div>
   );
 };

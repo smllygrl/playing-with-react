@@ -1,6 +1,6 @@
 import ProductCard from "../ProductCard/ProductCard";
 import { useContext } from "react";
-import { SearchContext } from "../../context/SearchContext";
+import { SearchContext } from "../../context/SearchContext/SearchContext";
 
 const ProductsList = ({ products }) => {
   // Breadcrumbs followed from SearchBar
@@ -14,11 +14,11 @@ const ProductsList = ({ products }) => {
   );
 
   return (
-    <>
+    <div className="productsList">
       {searchResults.map((product, index) => (
         <ProductCard product={product} key={index} />
       ))}
-    </>
+    </div>
   );
 };
 

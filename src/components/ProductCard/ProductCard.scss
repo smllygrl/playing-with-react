@@ -1,0 +1,29 @@
+.productCard {
+  border: 1px red solid;
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  height: 100px;
+  &__title {
+    display: flex;
+    border: 1px solid red;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 40px;
+    width: 70px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__description {
+    display: flex;
+    border: 1px solid red;
+    align-items: center;
+    justify-content: center;
+    padding-left: 70px;
+    margin: 10px;
+    height: 40px;
+    width: 70px;
+    font-size: 16px;
+  }
+}

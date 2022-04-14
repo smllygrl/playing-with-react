@@ -1,26 +1,22 @@
-import "./App.css";
-import Counter from "./components/Counter";
-import ThemeToggle from "./components/ThemeToggle";
-import ChooseEmoji from "./components/ChooseEmoji/ChooseEmoji";
-import ChooseResources from "./components/ChooseResources";
-import WindowWidth from "./components/WindowWidth/WindowWidth";
-import DisplayNameAndAndAge from "./components/DisplayNameAndAge";
-// import { ThemeProvider } from "./ThemeContext";
-import SearchBar from "./components/SearchBar";
-import Products from "./containers/Products";
-import SearchProvider from "./context/SearchContext";
+import "./styles/styles.scss";
+// import Counter from "./components/Counter";
+// import ChooseEmoji from "./components/ChooseEmoji/ChooseEmoji";
+// import ChooseResources from "./components/ChooseResources";
+// import WindowWidth from "./components/WindowWidth/WindowWidth";
+// import DisplayNameAndAndAge from "./components/DisplayNameAndAge";
+import SearchProvider from "./context/SearchContext/SearchContext";
+import ContextContainer from "./containers/ContextContainer/ContextContainer";
 
 function App() {
   return (
-    // Everything wrapped in the search provider has access to search and setSearch
+    // Everything wrapped in the search provider has access to search and
+
     <SearchProvider>
-      <SearchBar />
-      <Products />
+      <ContextContainer />
       {/* <DisplayNameAndAndAge name={"Natalie"} age={27} />
       <WindowWidth />
       <ChooseEmoji />
       <Counter />
-      <ThemeToggle />
       <ChooseResources />
       <DisplayNameAndAndAge name={32} age={"Luke"} /> */}
     </SearchProvider>
